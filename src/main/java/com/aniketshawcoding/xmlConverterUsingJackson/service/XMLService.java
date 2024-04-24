@@ -1,4 +1,4 @@
-package com.aniketshawcoding.xmlConverterUsingJackson;
+package com.aniketshawcoding.xmlConverterUsingJackson.service;
 
 import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;

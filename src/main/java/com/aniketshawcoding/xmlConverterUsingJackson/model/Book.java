@@ -1,4 +1,4 @@
-package com.aniketshawcoding.xmlConverterUsingJackson;
+package com.aniketshawcoding.xmlConverterUsingJackson.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.*;
 

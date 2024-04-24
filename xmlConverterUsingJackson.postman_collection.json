@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "afb50b39-e0d3-4a62-a577-02d7fcab7b14",
+		"name": "xmlConverterUsingJackson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19890197"
+	},
+	"item": [
+		{
+			"name": "book-toObject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<book>\r\n    <title>Java Spring Boot App</title>\r\n    <author>Aniket Shaw 2024</author>\r\n</book>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/api/book/toObject",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"book",
+						"toObject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "office-toObject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<office>\r\n    <name>Main Office</name>\r\n    <location>New York</location>\r\n    <employee>\r\n            <name>John Doe</name>\r\n            <position>Manager</position>\r\n        </employee>\r\n</office>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/api/office/toObject",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"office",
+						"toObject"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<book>\r\n    <title>Java Spring Boot App</title>\r\n    <author>Aniket Shaw 2024</author>\r\n</book>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8888/api/book/toObject",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"book",
+								"toObject"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "book-toXML",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Python Spring Boot App\",\r\n    \"author\": \"Aniket Shaw 2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/api/book/toXML",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"book",
+						"toXML"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "office-toXML",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Main Office\",\r\n    \"location\": \"New York\",\r\n    \"employees\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/api/office/toXML",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"office",
+						"toXML"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

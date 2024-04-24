@@ -1,4 +1,4 @@
-package com.aniketshawcoding.xmlConverterUsingJackson;
+package com.aniketshawcoding.xmlConverterUsingJackson.util;
 
 import java.util.List;
 
