@@ -1,9 +1,11 @@
 package com.aniketshawcoding.xmlConverterUsingJackson.model;
 
 public class Employee {
+	
     private String name;
     private String position;
-	public String getName() {
+	
+    public String getName() {
 		return name;
 	}
 	public void setName(String name) {

@@ -36,13 +36,42 @@
 			"response": []
 		},
 		{
+			"name": "school-toObject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<school>\r\n    <classrooms>\r\n        <classroom>\r\n            <classroom_number>101</classroom_number>\r\n            <benches>\r\n                <bench>\r\n                    <bench_number>1</bench_number>\r\n                </bench>\r\n                <bench>\r\n                    <bench_number>2</bench_number>\r\n                </bench>\r\n            </benches>\r\n            <chairs>\r\n                <chair>\r\n                    <chair_number>1</chair_number>\r\n                </chair>\r\n                <chair>\r\n                    <chair_number>2</chair_number>\r\n                </chair>\r\n                <chair>\r\n                    <chair_number>3</chair_number>\r\n                </chair>\r\n            </chairs>\r\n        </classroom>\r\n        <classroom>\r\n            <classroom_number>102</classroom_number>\r\n            <benches>\r\n                <bench>\r\n                    <bench_number>1</bench_number>\r\n                </bench>\r\n                <bench>\r\n                    <bench_number>2</bench_number>\r\n                </bench>\r\n                <bench>\r\n                    <bench_number>3</bench_number>\r\n                </bench>\r\n            </benches>\r\n            <chairs>\r\n                <chair>\r\n                    <chair_number>1</chair_number>\r\n                </chair>\r\n                <chair>\r\n                    <chair_number>2</chair_number>\r\n                </chair>\r\n            </chairs>\r\n        </classroom>\r\n    </classrooms>\r\n</school>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/api/school/toObject",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"school",
+						"toObject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "office-toObject",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "<office>\r\n    <name>Main Office</name>\r\n    <location>New York</location>\r\n    <employee>\r\n            <name>John Doe</name>\r\n            <position>Manager</position>\r\n        </employee>\r\n</office>\r\n",
+					"raw": "<office>\r\n    <name>Main Office</name>\r\n    <location>New York</location>\r\n    <employee>\r\n        <name>John Doe</name>\r\n        <position>Manager</position>\r\n    </employee>\r\n    <employee>\r\n        <name>Jane Smith</name>\r\n        <position>Engineer</position>\r\n    </employee>\r\n</office>\r\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -149,6 +178,35 @@
 					"path": [
 						"api",
 						"office",
+						"toXML"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "school-toXML",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"classrooms\": [\r\n        {\r\n            \"classroomNumber\": \"101\",\r\n            \"benches\": [\r\n                {\r\n                    \"benchNumber\": \"1\"\r\n                },\r\n                {\r\n                    \"benchNumber\": \"2\"\r\n                }\r\n            ],\r\n            \"chairs\": [\r\n                {\r\n                    \"chairNumber\": \"1\"\r\n                },\r\n                {\r\n                    \"chairNumber\": \"2\"\r\n                },\r\n                {\r\n                    \"chairNumber\": \"3\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"classroomNumber\": \"102\",\r\n            \"benches\": [\r\n                {\r\n                    \"benchNumber\": \"1\"\r\n                },\r\n                {\r\n                    \"benchNumber\": \"2\"\r\n                },\r\n                {\r\n                    \"benchNumber\": \"3\"\r\n                }\r\n            ],\r\n            \"chairs\": [\r\n                {\r\n                    \"chairNumber\": \"1\"\r\n                },\r\n                {\r\n                    \"chairNumber\": \"2\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/api/school/toXML",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"school",
 						"toXML"
 					]
 				}

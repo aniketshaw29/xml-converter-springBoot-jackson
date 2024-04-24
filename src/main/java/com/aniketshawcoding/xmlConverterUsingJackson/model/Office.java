@@ -1,18 +1,21 @@
 package com.aniketshawcoding.xmlConverterUsingJackson.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.*;
 
 import java.util.List;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 @JacksonXmlRootElement(localName = "office")	
 public class Office {
+	
 	@JacksonXmlProperty(localName = "name")
     private String name;
+	
 	@JacksonXmlProperty(localName = "location")
     private String location;
-    private List<Employee> employees;
+    
+	private List<Employee> employees;
 
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "employee")
